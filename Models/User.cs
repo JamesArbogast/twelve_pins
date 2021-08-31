@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace twelve_pins.Models
   {
@@ -28,6 +29,12 @@ namespace twelve_pins.Models
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
+
+        [NotMapped]
+        [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "doesn't match password")]
+        [Display(Name = "Confirm Password")]
+        public string ConfirmPW { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;

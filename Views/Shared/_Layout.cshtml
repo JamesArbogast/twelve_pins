@@ -6,28 +6,78 @@
     <title>@ViewData["Title"] - twelve_pins</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Navbar.css">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">twelve_pins</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div id="line"></div>
+        <div id="line1"></div>
+        <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center p-3">
+            <div style="max-height: 80px" id="navLogo">
+                <a class="navbar-brand" href="#"><img src="https://lh3.googleusercontent.com/proxy/bFwbV11XiPtvV71SqqQI5akmn5-HRiueQlyPSjMkkOmDXomOT4tmd21ZXD4k9kI-l2B7shxfkYoJ7eRgSlaGCoJARhvKv4DadAf9qB-nyLgi" class="mx-auto d-block" alt="logo" /></a>
+            </div >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav w-100 d-flex justify-content-center">
+                <li class="dropdown nav-item"> 
+                    <a id="dLabel" data-toggle="dropdown" data-target="#" href="" class="nav-link text-dark">
+                        Bowl
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 21">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                    </a> 
+                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Reserve a Lane </a>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Parties
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Birthday</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Company</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Leagues
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">Tournaments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">League Standings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Specials</a>
+                    </li>
+                </ul>
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Eat</a>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Pro Shop</a>
+                    </li>
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">About</a>
+                    </li>
+            </ul>
+        </div>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using twelve_pins.Models;
 
 namespace twelve_pins
 {
@@ -20,10 +22,18 @@ namespace twelve_pins
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllersWithViews();
-        }
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddDbContext<TwelvePinsContext>(options => options.UseMySql(
+                Configuration["DBInfo:ConnectionString"],
+                ServerVersion.FromString("8.0.23-mysql")));
+    
+        // to access session directly from view, corresponds with: @using Microsoft.AspNetCore.Http in Views/_ViewImports.cshtml
+        services.AddHttpContextAccessor();
+        services.AddSession();
+        services.AddMvc(options => options.EnableEndpointRouting = false);
+    }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,18 +46,17 @@ namespace twelve_pins
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+        
+            // css, js, and image files can now be added to wwwroot folder
             app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
+            app.UseSession();
+            app.UseMvc(routes =>
             {
-                endpoints.MapControllerRoute(
+                routes.MapRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
     }
 }

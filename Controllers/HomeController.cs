@@ -11,12 +11,13 @@ namespace twelve_pins.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private TwelvePinsContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(TwelvePinsContext context)
         {
-            _logger = logger;
+            db = context;
         }
+
 
         public IActionResult Index()
         {

@@ -788,19 +788,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\james\\.nuget\\packages\\": {}
+    "/Users/javanogden/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj",
+      "projectUniqueName": "/Users/javanogden/Desktop/twelve_pins/twelve_pins.csproj",
       "projectName": "twelve_pins",
-      "projectPath": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj",
-      "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\obj\\",
+      "projectPath": "/Users/javanogden/Desktop/twelve_pins/twelve_pins.csproj",
+      "packagesPath": "/Users/javanogden/.nuget/packages/",
+      "outputPath": "/Users/javanogden/Desktop/twelve_pins/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/javanogden/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -853,7 +853,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

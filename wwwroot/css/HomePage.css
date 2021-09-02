@@ -1,0 +1,114 @@
+#carouselControls .carousel-item img {
+	object-fit: cover;
+	object-position: center;
+	height: 50vh;
+	overflow: hidden;
+}
+#carouselControls .carousel-item .text {
+	position: absolute;
+	padding-top: 7%;
+	padding-left: 9%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	font-weight: bold;
+	color: white;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.8) 10%,
+		rgba(0, 0, 0, 0.6) 25%,
+		rgba(0, 0, 0, 0.4) 40%,
+		rgba(0, 0, 0, 0.2) 45%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+#header1 p {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home-cards .col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(30%);
+}
+#home-cards .col:hover {
+	-webkit-filter: none !important;
+	filter: saturate(115%) brightness(135%) !important;
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	transition: transform 0.2s ease-in-out;
+	z-index: 3;
+	cursor: pointer;
+}
+#home-cards .col img {
+	object-position: fill;
+	min-width: 100%;
+	min-height: 100%;
+	height: 70vh;
+}
+
+#home-cards .col h2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 35%;
+	padding-left: 7%;
+	padding-right: 7%;
+	top: 0%;
+	color: rgb(150, 150, 150);
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.9) 5%,
+		rgba(0, 0, 0, 0.7) 25%,
+		rgba(0, 0, 0, 0.4) 30%,
+		rgba(0, 0, 0, 0) 45%
+	);
+}
+#home-cards .col h2:hover {
+	transform: scale(1.2);
+	transition: transform 0.2s ease-in-out;
+	color: rgb(255, 255, 255);
+}
+/* #header2 {
+	border-top: 50px solid red;
+} */
+#header2 .col img {
+	object-position: fill;
+	min-width: 100%;
+	min-height: 100%;
+	margin-top: 15%;
+}
+#header2 .col {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	min-width: 100%;
+	min-height: 100%;
+	height: 30vh;
+	margin-bottom: 100px;
+	margin-top: 20px;
+}
+#header2 .text {
+	position: absolute;
+	padding-top: 8%;
+	padding-left: 11%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	font-weight: bold;
+	color: white;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.8) 10%,
+		rgba(0, 0, 0, 0.6) 25%,
+		rgba(0, 0, 0, 0.4) 40%,
+		rgba(0, 0, 0, 0.2) 45%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	cursor: pointer;
+}

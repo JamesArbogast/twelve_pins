@@ -99,7 +99,7 @@ namespace CSharpExam.Controllers
             db.Leagues.Add(newLeague);
             db.SaveChanges();
 
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

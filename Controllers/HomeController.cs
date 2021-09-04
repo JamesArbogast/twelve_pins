@@ -14,9 +14,9 @@ namespace CSharpExam.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
         private TwelvePinsContext db;
+
         public HomeController(TwelvePinsContext context)
         {
             db = context;
@@ -87,7 +87,7 @@ namespace CSharpExam.Controllers
         {
             if (ModelState.IsValid == false)
             {
-                return View("Index");
+                return View("LoginReg");
             }
 
             User dbUser = db.Users.FirstOrDefault(user => user.Email == loginUser.LoginEmail);
@@ -95,7 +95,7 @@ namespace CSharpExam.Controllers
             if (dbUser == null)
             {
                 ModelState.AddModelError("LoginEmail", "Email not found.");
-                return View("Index");
+                return View("LoginReg");
             }
 
             PasswordHasher<LoginUser> hasher = new PasswordHasher<LoginUser>();
@@ -110,14 +110,14 @@ namespace CSharpExam.Controllers
 
             HttpContext.Session.SetInt32("UserId", dbUser.UserId);
             HttpContext.Session.SetString("FirstName", dbUser.FirstName);
-            return RedirectToAction("All", "Act");
+            return View("Index");
         }
 
-        [HttpPost("/logout")]
+        [HttpGet("/logout")]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index");
+            return View("LoginReg");
         }
 
         public IActionResult Privacy()

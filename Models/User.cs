@@ -21,7 +21,7 @@ namespace twelve_pins.Models
 
         [Required(ErrorMessage = "is required")]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Last Name")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "is required")]

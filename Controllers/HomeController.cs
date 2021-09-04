@@ -49,6 +49,12 @@ namespace CSharpExam.Controllers
             return View("Index");
         }
 
+        [HttpGet("/signin")]
+        public IActionResult SignIn()
+        {
+            return View("LoginReg");
+        }
+
         [HttpPost("/register")]
         public IActionResult Register(User newUser)
         {
@@ -62,7 +68,7 @@ namespace CSharpExam.Controllers
 
             if (ModelState.IsValid == false)
             {
-                return View("Index");
+                return View("LoginReg");
             }
 
             PasswordHasher<User> hasher = new PasswordHasher<User>();
@@ -73,7 +79,7 @@ namespace CSharpExam.Controllers
 
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
             HttpContext.Session.SetString("FirstName", newUser.FirstName);
-            return RedirectToAction("All", "Act");
+            return View("Index");
         }
 
         [HttpPost("/login")]

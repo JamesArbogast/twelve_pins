@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Myles\\Desktop\\coding\\twelve_pins\\twelve_pins.csproj": {}
+    "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Myles\\Desktop\\coding\\twelve_pins\\twelve_pins.csproj": {
+    "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Myles\\Desktop\\coding\\twelve_pins\\twelve_pins.csproj",
+        "projectUniqueName": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj",
         "projectName": "twelve_pins",
-        "projectPath": "C:\\Users\\Myles\\Desktop\\coding\\twelve_pins\\twelve_pins.csproj",
-        "packagesPath": "C:\\Users\\Myles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Myles\\Desktop\\coding\\twelve_pins\\obj\\",
+        "projectPath": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\twelve_pins.csproj",
+        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\james\\OneDrive\\Desktop\\code_projects\\twelve_pins\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Myles\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

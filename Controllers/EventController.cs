@@ -41,11 +41,12 @@ namespace CSharpExam.Controllers
         [HttpGet("/reserve/lane/")]
         public IActionResult ViewReserveLane()
         {
+          ViewBag.Lanes = db.Lanes;
           return View("ReserveLane");
         }
 
       [HttpPost("/reserve/lane/{laneId}")]
-      public IActionResult ReserveLane(int laneId)
+      public IActionResult ReserveLane(int laneId, ReservedLane reservedLane)
       {
         if (!isLoggedIn)
         {
@@ -57,11 +58,7 @@ namespace CSharpExam.Controllers
 
         if (existingReservedLane == null)
         {
-            ReservedLane reservedLane = new ReservedLane()
-            {
-                LaneId = laneId,
-                UserId = (int)uid
-            };
+            reservedLane.UserId = (int)uid;
 
             db.ReservedLanes.Add(reservedLane);
         }

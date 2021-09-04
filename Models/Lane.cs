@@ -12,9 +12,5 @@ namespace twelve_pins.Models
       [MinLength(2, ErrorMessage = "must be at least 2 characters")]
       [Display(Name = "Lane Number")]
       public int LaneNumber { get; set; }
-
-      [Display(Name = "Bumper Required")]
-      public bool BumperRequired { get; set; }
-
     }
   }

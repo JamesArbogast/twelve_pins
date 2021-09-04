@@ -1,4 +1,4 @@
-@model ReservedLane
+@model ReservedLane;
 
 <h3 class="text-center">Reserve Lane</h3>
 <hr />
@@ -11,9 +11,14 @@
   </div>
 
   <div class="form-group">
-    <label asp-for="Lane"></label>
-    <span asp-validation-for="Lane" class="text-danger font-weight-bold"></span>
-    <input asp-for="Lane" class="form-control" />
+    <label asp-for="LaneId">Lane</label>
+    <span asp-validation-for="LaneId" class="text-danger font-weight-bold"></span>
+    <select asp-for="LaneId" class="form-control">
+      @foreach(Lane lane in ViewBag.Lanes) 
+      {
+        <option value="@lane.LaneId">@lane.LaneNumber</option>
+      }
+    </select>
   </div>
 
   <button class="btn btn-outline-primary">Reserve Lane</button>

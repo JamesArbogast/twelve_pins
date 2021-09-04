@@ -9,7 +9,7 @@ using twelve_pins.Models;
 namespace twelve_pins.Migrations
 {
     [DbContext(typeof(TwelvePinsContext))]
-    [Migration("20210904212412_twelvepinsDB")]
+    [Migration("20210904213610_twelvepinsDB")]
     partial class twelvepinsDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,9 +54,6 @@ namespace twelve_pins.Migrations
                     b.Property<int>("LaneId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<bool>("BumperRequired")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<int>("LaneNumber")
                         .HasColumnType("int");

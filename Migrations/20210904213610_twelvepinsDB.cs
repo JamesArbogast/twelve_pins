@@ -33,7 +33,6 @@ namespace twelve_pins.Migrations
                     LaneId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     LaneNumber = table.Column<int>(type: "int", nullable: false),
-                    BumperRequired = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

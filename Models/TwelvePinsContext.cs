@@ -10,5 +10,6 @@ namespace twelve_pins.Models
         public DbSet<Lane> Lanes { get; set; }
         public DbSet<Party> Parties { get; set; }
         public DbSet<League> Leagues { get; set; }
+        public DbSet<ReservedLane> ReservedLanes { get; set; }
     }
 }

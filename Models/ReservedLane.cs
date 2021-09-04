@@ -6,6 +6,7 @@ public class ReservedLane
 {
     [Key]
     public int ReservedLaneId { get; set; }
+    public DateTime ReserveDate { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
     public int LaneId { get; set; }

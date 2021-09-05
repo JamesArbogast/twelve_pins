@@ -91,7 +91,7 @@
                         </li>
                     }
                     <li class="nav-item ml-5">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">About</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard" asp-route-userId="@HttpContext.Session.GetInt32('UserId')">About</a>
                     </li>
             </ul>
         </div>

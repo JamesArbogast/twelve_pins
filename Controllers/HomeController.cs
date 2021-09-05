@@ -120,10 +120,14 @@ namespace CSharpExam.Controllers
             return View("LoginReg");
         }
 
-        [HttpGet("/profile")]
-        public IActionResult Profile()
+        [HttpGet("/profile/{userId}")]
+        public IActionResult Profile(int userId)
         {
-            return View("Profile");
+            User user = db.Users
+            .Include(l => l.Leagues)
+            .Include(r => r.Lanes)
+            .FirstOrDefault(u => u.UserId == userId);
+            return View("Profile", user);
         }
 
         public IActionResult Privacy()

@@ -17,6 +17,33 @@ namespace twelve_pins.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
+            modelBuilder.Entity("LeagueMember", b =>
+                {
+                    b.Property<int>("LeagueMemberId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("LeagueId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LeagueMemberId");
+
+                    b.HasIndex("LeagueId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("LeagueMember");
+                });
+
             modelBuilder.Entity("ReservedLane", b =>
                 {
                     b.Property<int>("ReservedLaneId")
@@ -56,12 +83,7 @@ namespace twelve_pins.Migrations
                     b.Property<int>("LaneNumber")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("LaneId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Lanes");
                 });
@@ -89,12 +111,7 @@ namespace twelve_pins.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("LeagueId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Leagues");
                 });
@@ -140,12 +157,7 @@ namespace twelve_pins.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("PartyId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Parties");
                 });
@@ -183,6 +195,25 @@ namespace twelve_pins.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("LeagueMember", b =>
+                {
+                    b.HasOne("twelve_pins.Models.League", "League")
+                        .WithMany()
+                        .HasForeignKey("LeagueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("twelve_pins.Models.User", "User")
+                        .WithMany("Leagues")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("League");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ReservedLane", b =>
                 {
                     b.HasOne("twelve_pins.Models.Lane", "Lane")
@@ -192,7 +223,7 @@ namespace twelve_pins.Migrations
                         .IsRequired();
 
                     b.HasOne("twelve_pins.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Lanes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -202,34 +233,11 @@ namespace twelve_pins.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("twelve_pins.Models.Lane", b =>
-                {
-                    b.HasOne("twelve_pins.Models.User", null)
-                        .WithMany("Lanes")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("twelve_pins.Models.League", b =>
-                {
-                    b.HasOne("twelve_pins.Models.User", null)
-                        .WithMany("Leagues")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("twelve_pins.Models.Party", b =>
-                {
-                    b.HasOne("twelve_pins.Models.User", null)
-                        .WithMany("Parties")
-                        .HasForeignKey("UserId");
-                });
-
             modelBuilder.Entity("twelve_pins.Models.User", b =>
                 {
                     b.Navigation("Lanes");
 
                     b.Navigation("Leagues");
-
-                    b.Navigation("Parties");
                 });
 #pragma warning restore 612, 618
         }

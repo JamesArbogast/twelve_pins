@@ -68,3 +68,8 @@ obj/twelve_pins.csproj.nuget.g.props
 obj/Debug/net5.0/project.razor.json
 obj/Debug/net5.0/twelve_pins.assets.cache
 obj/Debug/net5.0/twelve_pins.GeneratedMSBuildEditorConfig.editorconfig
+Migrations/20210905021144_First.cs
+.gitignore
+Migrations/TwelvePinsContextModelSnapshot.cs
+appsettings.json
+bin/Debug/net5.0/appsettings.json

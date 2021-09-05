@@ -43,8 +43,8 @@ namespace CSharpExam.Controllers
         {
             if (isLoggedIn)
             {
-                return RedirectToAction("All", "Act");
-            }
+                return View("Index");
+            }   
 
             return View("Index");
         }
@@ -118,6 +118,12 @@ namespace CSharpExam.Controllers
         {
             HttpContext.Session.Clear();
             return View("LoginReg");
+        }
+
+        [HttpGet("/profile")]
+        public IActionResult Profile()
+        {
+            return View("Profile");
         }
 
         public IActionResult Privacy()

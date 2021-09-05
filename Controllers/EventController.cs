@@ -41,36 +41,21 @@ namespace CSharpExam.Controllers
         [HttpGet("/reserve/lane/")]
         public IActionResult ViewReserveLane()
         {
+          ViewBag.Lanes = db.Lanes;
           return View("ReserveLane");
         }
 
-      [HttpPost("/reserve/lane/{laneId}")]
-      public IActionResult ReserveLane(int laneId)
+      [HttpPost("/reserve/lane/")]
+      public IActionResult ReserveLane(ReservedLane newReservedLane)
       {
         if (!isLoggedIn)
         {
-            return RedirectToAction("LoginReg", "Home");
+          return RedirectToAction("LoginReg", "Home");
         }
-
-        ReservedLane existingReservedLane = db.ReservedLanes
-            .FirstOrDefault(p => p.UserId == (int)uid && p.LaneId == laneId);
-
-        if (existingReservedLane == null)
-        {
-            ReservedLane reservedLane = new ReservedLane()
-            {
-                LaneId = laneId,
-                UserId = (int)uid
-            };
-
-            db.ReservedLanes.Add(reservedLane);
-        }
-        else
-        {
-          db.ReservedLanes.Remove(existingReservedLane);
-        }
-
+        newReservedLane.UserId = (int)uid;
+        db.ReservedLanes.Add(newReservedLane);
         db.SaveChanges();
+
         return RedirectToAction("Index", "Home");
       }
 
@@ -83,19 +68,11 @@ namespace CSharpExam.Controllers
         [HttpPost("/league/create")]
         public IActionResult Create(League newLeague)
         {
-
-            // Every time a form is submitted, check the validations.
             if (ModelState.IsValid == false)
             {
-                // Go back to the form so error messages are displayed.
                 return View("CreateLeague");
             }
 
-
-            // If any above custom errors were added, ModelState would now be invalid.
-
-            // HttpContext.Session.SetString("NameOne", newWedding.NameOne);
-            // newLeague.UserId = (int)uid;
             db.Leagues.Add(newLeague);
             db.SaveChanges();
 

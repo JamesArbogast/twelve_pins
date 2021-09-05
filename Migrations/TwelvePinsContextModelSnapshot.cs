@@ -53,9 +53,6 @@ namespace twelve_pins.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<bool>("BumperRequired")
-                        .HasColumnType("tinyint(1)");
-
                     b.Property<int>("LaneNumber")
                         .HasColumnType("int");
 

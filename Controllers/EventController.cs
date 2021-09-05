@@ -78,6 +78,12 @@ namespace CSharpExam.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet("/league/page")]
+        public IActionResult LeaguePage()
+        {
+          return View();
+        }
     }
 }
 

@@ -39,8 +39,7 @@ namespace twelve_pins.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-        public List<League> Leagues { get; set; }
-        public List<Lane> Lanes { get; set; }
-        public List<Party> Parties { get; set; }
+        public List<LeagueMember> Leagues { get; set; }
+        public List<ReservedLane> Lanes { get; set; }
       }
   }

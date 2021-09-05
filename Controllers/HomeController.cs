@@ -43,8 +43,8 @@ namespace CSharpExam.Controllers
         {
             if (isLoggedIn)
             {
-                return RedirectToAction("All", "Act");
-            }
+                return View("Index");
+            }   
 
             return View("Index");
         }

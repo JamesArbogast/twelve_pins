@@ -120,6 +120,12 @@ namespace CSharpExam.Controllers
             return View("LoginReg");
         }
 
+        [HttpGet("/profile")]
+        public IActionResult Profile()
+        {
+            return View("Profile");
+        }
+
         public IActionResult Privacy()
         {
             return View();

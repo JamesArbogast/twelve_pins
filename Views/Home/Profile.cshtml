@@ -6,18 +6,23 @@
       <h3 class="m-4">Lane Reservations</h3>
       <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
         <thead class="m-4">
-          <th>Time</th>
-          <th>Lane</th>
+          <th style="border: 3px black solid; padding: 20px">Time</th>
+          <th style="border: 3px black solid; padding: 20px">Lane</th>
         </thead>
         @foreach(ReservedLane resLane in @Model.Lanes)
         {
-          <td>@resLane.ReserveDate</td>
-          <td>@resLane.ReservedLaneId</td>
+          <td style="border: 3px black solid; padding: 20px">@resLane.ReserveDate</td>
+          <td style="border: 3px black solid; padding: 20px">@resLane.ReservedLaneId</td>
         }
       </table>
       <h3 class="m-4">Leagues</h3>
-      <ul>
-      </ul>
+      <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
+        @foreach(League resLane in @Model.Leagues)
+        {
+          <td style="border: 3px black solid; padding: 20px">@resLane.ReserveDate</td>
+          <td style="border: 3px black solid; padding: 20px">@resLane.ReservedLaneId</td>
+        }
+      </table>
     </div>
     <div class="card-body">
 </div>

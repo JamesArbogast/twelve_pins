@@ -82,7 +82,8 @@ namespace CSharpExam.Controllers
         [HttpGet("/league/page")]
         public IActionResult LeaguePage()
         {
-          return View();
+          ViewBag.Leagues = db.Leagues;
+          return View("LeaguePage");
         }
     }
 }

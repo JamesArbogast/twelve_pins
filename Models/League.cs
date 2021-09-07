@@ -14,6 +14,7 @@ namespace twelve_pins.Models
       public string Name { get; set; }
 
       [Required(ErrorMessage = "is required")]
+      [DataType(DataType.Date)]
       [Display(Name = "Start Date")]
       public DateTime StartDate { get; set; }
 

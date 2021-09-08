@@ -18,7 +18,6 @@ namespace twelve_pins.Models
       [Display(Name = "Start Date")]
       public DateTime StartDate { get; set; }
 
-      [Required(ErrorMessage = "is required")]
       [MinLength(5, ErrorMessage = "must be at least 5 characters")]
       [Display(Name = "Description")]
       public string Description { get; set; }

@@ -17,10 +17,11 @@
       </table>
       <h3 class="m-4">Leagues</h3>
       <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
-        @foreach(League resLane in @Model.Leagues)
+        @foreach(LeagueMember league in @Model.Leagues)
         {
-          <td style="border: 3px black solid; padding: 20px">@resLane.ReserveDate</td>
-          <td style="border: 3px black solid; padding: 20px">@resLane.ReservedLaneId</td>
+          <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>
+          <td style="border: 3px black solid; padding: 20px">@league.League.Description</td>
+          <td style="border: 3px black solid; padding: 20px">@league.League.StartDate</td>
         }
       </table>
     </div>

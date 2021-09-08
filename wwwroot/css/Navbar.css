@@ -8,16 +8,16 @@ header {
 	border-bottom: 5px solid rgb(235, 175, 66);
 }
 #line {
-	width: 100vw;
+	width: 95vw;
 	margin-bottom: 25px;
 	position: absolute;
-	border: 5px solid rgb(228, 54, 54);
+	border: 0.5vw solid rgb(228, 54, 54);
 }
 #line1 {
-	width: 100vw;
+	width: 95vw;
 	margin-top: 25px;
 	position: absolute;
-	border: 5px solid rgb(228, 54, 54);
+	border: 0.5vw solid rgb(228, 54, 54);
 }
 #navigation {
 	font-family: Arial, Helvetica, sans-serif;

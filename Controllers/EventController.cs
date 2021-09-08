@@ -96,7 +96,11 @@ namespace twelve_pins.Controllers
         [HttpGet("/league/page")]
         public IActionResult LeaguePage()
         {
+          List<League> allLeagues = db.Leagues
+          .Include(j => j.LeagueMembers)
+          .ToList();
           ViewBag.Leagues = db.Leagues;
+          ViewBag.AllLeagues = allLeagues;
           return View("LeaguePage");
         }
     }

@@ -17,6 +17,11 @@
       </table>
       <h3 class="m-4">Leagues</h3>
       <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
+        <thead class="m-4">
+          <th style="border: 3px black solid; padding: 20px">Name</th>
+          <th style="border: 3px black solid; padding: 20px">Description</th>
+          <th style="border: 3px black solid; padding: 20px">Founding Date</th>
+        </thead>
         @foreach(LeagueMember league in @Model.Leagues)
         {
           <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>

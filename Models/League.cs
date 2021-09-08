@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace twelve_pins.Models
@@ -23,5 +24,7 @@ namespace twelve_pins.Models
       public string Description { get; set; }
       public DateTime CreatedAt { get; set; } = DateTime.Now;
       public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+      public List<LeagueMember> LeagueMembers { get; set; }
     }
   }

@@ -10,13 +10,21 @@
 </div>
     <div class="col-6">
   <div class="form-group">
-      @foreach(League league in ViewBag.Leagues) 
+      @foreach(League league in ViewBag.AllLeagues) 
       {
+
+        bool alreadyJoined = league.LeagueMembers.Any(join => Context.Session.GetInt32("UserId") == join.UserId);
         <h3>@league.Name</h3>
         <p>@league.Description</p>
         <p>Start Date: @league.StartDate</p>
         <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
+          @if (alreadyJoined)
+          {
           <button class="btn btn-outline-success m-3">Join League</button> 
+          } 
+          else {
+            <button class="btn btn-outline-danger btn-sm">Leave League</button>
+          }
         </form>
       }
   </div>

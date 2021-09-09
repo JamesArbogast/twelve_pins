@@ -103,6 +103,24 @@ namespace twelve_pins.Controllers
           ViewBag.AllLeagues = allLeagues;
           return View("LeaguePage");
         }
+        
+        [HttpGet("/about/page")]
+        public IActionResult About()
+        {
+          return View();
+        }
+
+        [HttpGet("/specials/page")]
+        public IActionResult Specials()
+        {
+          return View();
+        }
+
+        [HttpGet("/shop/page")]
+        public IActionResult Shop()
+        {
+          return View();
+        }
     }
 }
 

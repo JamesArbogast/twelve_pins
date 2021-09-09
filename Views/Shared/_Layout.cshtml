@@ -21,13 +21,16 @@
         <div id="line1"></div>
         <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center p-3">
             <div style="max-height: 80px" id="navLogo">
-                <a class="navbar-brand" href="#"><img src="/img/logo-pin.jpg" class="mx-auto d-block" alt="logo" /></a>
-            </div >
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/img/logo-pin.jpg" class="mx-auto d-block" alt="logo" /></a>
+            </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
                 <li class="dropdown nav-item"> 
                     <a id="dLabel" data-toggle="dropdown" data-target="#" href="" class="nav-link text-dark">
                         Bowl
@@ -40,64 +43,64 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Reserve a Lane</a>
                     </li>
                     <li class="dropdown-submenu">
-                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Parties
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Parties
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Birthday</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Birthday</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Company</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Company</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown-submenu">
-                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Leagues
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Event" asp-action="LeaguePage">Leagues
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">Schedule</a>
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">Schedule</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">Tournaments</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">League Standings</a>
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">League Standings</a>
                             </li>
                         </ul>
                     </li>
                 </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Specials</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Specials">Specials</a>
                     </li>
                 </ul>
-                    <li class="nav-item ml-5">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Eat</a>
                     </li>
-                    <li class="nav-item ml-5">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Pro Shop</a>
+                    <li class="nav-item ml-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Shop">Pro Shop</a>
                     </li>
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item ml-5">
+                        <li class="nav-item ml-4">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Logout">Logout (@Context.Session.GetString("FirstName"))</a>
                         </li>
                     }
                     
                     else 
                     {
-                    <li class="nav-item ml-5">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignIn">Login</a>
                     </li>
                     }
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item ml-5">
+                        <li class="nav-item ml-4">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Profile" asp-route-userId="@Context.Session.GetInt32("UserId")">Profile</a>
                         </li>
                     }
-                    <li class="nav-item ml-5">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">About</a>
+                    <li class="nav-item ml-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="About">About</a>
                     </li>
             </ul>
         </div>
@@ -111,8 +114,8 @@
     </div>
 
 
-<div class="container-fluid bg-light">
-    <footer class="text-center text-lg-start mt-xl-5 pt-4">
+<div class="container-fluid bg-light border-top">
+    <footer class="text-center text-lg-start mt-xl-5 mt-4">
     <div class="container-fluid  mx-auto">
     <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">

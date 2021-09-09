@@ -13,45 +13,28 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-<<<<<<< HEAD
-#line 1 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
-=======
 #line 1 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\_ViewImports.cshtml"
->>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
 using twelve_pins;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-<<<<<<< HEAD
-#line 2 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
-=======
 #line 2 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\_ViewImports.cshtml"
->>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
 using twelve_pins.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-<<<<<<< HEAD
-#line 4 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
-=======
 #line 4 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\_ViewImports.cshtml"
->>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"652e5ca50852797c4d7987eb02ab7d097cfd0137", @"/Views/Home/Profile.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"edb86fbdb37595224ded6f8eba702c6fc131d03d", @"/Views/_ViewImports.cshtml")]
-=======
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"87aae07724c1204cd1da6bf3c4ed45ceadd7e2c1", @"/Views/Home/Profile.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57511120aa0574db89f5162b4026b2ae467a1797", @"/Views/_ViewImports.cshtml")]
->>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
     public class Views_Home_Profile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<User>
     {
         #pragma warning disable 1998
@@ -127,9 +110,6 @@ using Microsoft.AspNetCore.Http;
 #line 25 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\Home\Profile.cshtml"
          foreach(LeagueMember league in @Model.Leagues)
         {
-<<<<<<< HEAD
-          
-=======
 
 #line default
 #line hidden
@@ -161,7 +141,6 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("</td>\r\n");
 #nullable restore
 #line 30 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\Home\Profile.cshtml"
->>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
         }
 
 #line default

@@ -16,7 +16,7 @@
         <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center p-3">
             <div style="max-height: 80px" id="navLogo">
                 <a class="navbar-brand" href="#"><img src="/img/logo-pin.jpg" class="mx-auto d-block" alt="logo" /></a>
-            </div >
+            </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,6 +71,13 @@
                     <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Pro Shop</a>
                     </li>
+                    @if(Context.Session.GetInt32("UserId") == 1 || Context.Session.GetInt32("UserId") == 2)
+                    {
+                        <li class="dropdown nav-item ml-5">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Admin">Admin</a>
+                        </li>
+                    }
+
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
                         <li class="nav-item ml-5">

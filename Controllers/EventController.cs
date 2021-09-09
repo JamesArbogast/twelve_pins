@@ -80,17 +80,37 @@ namespace twelve_pins.Controllers
         }
 
         [HttpPost("/league/create")]
-        public IActionResult Create(League newLeague)
+        public IActionResult CreateLeague(League newLeague)
         {
             if (ModelState.IsValid == false)
             {
-                return View("CreateLeague");
+              return View("CreateLeague");
             }
 
             db.Leagues.Add(newLeague);
             db.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return View("Admin");
+        }
+
+        [HttpPost("/lane/create")]
+        public IActionResult CreateLane(Lane newLane)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return View("Admin");
+            }
+
+            db.Lanes.Add(newLane);
+            db.SaveChanges();
+
+            return View("Admin");
+        }
+
+        [HttpGet("/admin")]
+        public IActionResult Admin()
+        {
+            return View ("Admin");
         }
 
         [HttpGet("/league/page")]

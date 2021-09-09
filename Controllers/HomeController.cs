@@ -38,6 +38,21 @@ namespace CSharpExam.Controllers
             }
         }
 
+        private bool isAdmin
+        {
+            get {
+
+                if(HttpContext.Session.GetInt32("UserId") == 1 || HttpContext.Session.GetInt32("UserId") == 2) 
+                {
+                    return isAdmin == true;
+                }
+                else
+                {
+                    return isAdmin == false;
+                }
+            }
+        }
+
         [HttpGet("")]
         public IActionResult Index()
         {

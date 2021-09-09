@@ -9,7 +9,6 @@ namespace twelve_pins.Models
       public int LaneId { get; set; }
 
       [Required(ErrorMessage = "is required")]
-      [MinLength(2, ErrorMessage = "must be at least 2 characters")]
       [Display(Name = "Lane Number")]
       public int LaneNumber { get; set; }
     }

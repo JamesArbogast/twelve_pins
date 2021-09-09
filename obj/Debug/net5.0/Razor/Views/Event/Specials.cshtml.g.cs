@@ -13,34 +13,37 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
+#line 1 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
 using twelve_pins;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
+#line 2 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
 using twelve_pins.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
+#line 4 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
+<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"62561df1f3e5cd512b6875824f4c502baf602099", @"/Views/Event/Specials.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"edb86fbdb37595224ded6f8eba702c6fc131d03d", @"/Views/_ViewImports.cshtml")]
+=======
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7dc6c3fd6e3ece385fdd685411a0671e0f4e9078", @"/Views/Event/Specials.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57511120aa0574db89f5162b4026b2ae467a1797", @"/Views/_ViewImports.cshtml")]
+>>>>>>> 86356085a282df1fb32dcd30b287d7e240ef0c53
     public class Views_Event_Specials : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", "~/css/Specials.css", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/js/specials.js"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", new global::Microsoft.AspNetCore.Html.HtmlString("text/javascript"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -66,7 +69,11 @@ using Microsoft.AspNetCore.Http;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "62561df1f3e5cd512b6875824f4c502baf6020994647", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7dc6c3fd6e3ece385fdd685411a0671e0f4e90784067", async() => {
+>>>>>>> 86356085a282df1fb32dcd30b287d7e240ef0c53
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -77,7 +84,11 @@ using Microsoft.AspNetCore.Http;
             __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
             __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
 #nullable restore
+<<<<<<< HEAD
 #line 1 "/Users/javanogden/Desktop/pins/twelve_pins/Views/Event/Specials.cshtml"
+=======
+#line 1 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\Event\Specials.cshtml"
+>>>>>>> 86356085a282df1fb32dcd30b287d7e240ef0c53
 __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper.AppendVersion = true;
 
 #line default
@@ -95,34 +106,50 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper.AppendVersion = true;
 <link href=""https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"" rel=""stylesheet"" integrity=""sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"" crossorigin=""anonymous"">
 
 
-<h1>Specials</h1>
+<h2 class=""bg-secondary text-light text-center p-5 m-0"">As a special thanks to our customers, here are a couple ways so make your next bowling adventure even better!</h2>
+<div id=""specials-block"" class=""container-fluid ps-5 pe-5 bg-secondary d-flex justify-content-between"">
+<div class=""flip-card mb-5 bg-body rounded"">
+  <div class=""flip-card-inner"">
+    <div class=""flip-card-front rounded bg-success"">
+      <h1 class=""display-1"">$ $ $</h1>
+    </div>
+    <div class=""flip-card-back bg-danger rounded"">
+      <h3>FREE APPETIZER</h3>
+      <p>Get any free appetizer with the purchase of 2 entrees at The GutterBall!</p>
+      <h6>Code: OP3-EP2-L1S</h6>
+    </div>
+  </div>
+</div>
+<div class=""flip-card mb-5 bg-body rounded"">
+  <div class=""flip-card-inner"">
+    <div class=""flip-car");
+            WriteLiteral(@"d-front rounded bg-warning"">
+      <h1 class=""display-1"">$ $ $</h1>
+    </div>
+    <div class=""flip-card-back bg-danger rounded"">
+      <h3>50% LANE FEE</h3>
+      <p>Reserve a lane online and receive 50% off of the lane fee!</p>
+      <h6>Code: A4J-E1R-89SA</h6>
+    </div>
+  </div>
+</div>
+<div class=""flip-card mb-5 bg-body rounded"">
+  <div class=""flip-card-inner"">
+    <div class=""flip-card-front rounded bg-primary"">
+      <h1 class=""display-1"">$ $ $</h1>
+    </div>
+    <div class=""flip-card-back bg-danger rounded"">
+      <h3>FREE DRINK</h3>
+      <p>That's right! Buy and entree at full price and choose a free drink to go along with it! Yup! Even a beer!</p>
+      <h6>Code: SD3-JK4-90FD</h6>
+    </div>
+  </div>
+</div>
 
-<div class=""container d-flex justify-content-center"">
-<div class=""flip-card"">
-  <div class=""flip-card-inner"">
-    <div class=""flip-card-front bg-success"">
-      <h1 class=""display-1"">$ $ $</h1>
-    </div>
-    <div class=""flip-card-back"">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-    </div>
-  </div>
-</div>
-<div class=""flip-card"">
-  <div class=""flip-card-inner"">
-    <div class=""flip-card-front"">
-      <h1 class=""display-1"">$ $ $</h1>
-    </div>
-    <div class=""flip-card-back"">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-    </div>
-  </div>
-</div>
 
 
 ");
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62561df1f3e5cd512b6875824f4c502baf6020997407", async() => {
             }
             );
@@ -138,6 +165,8 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper.AppendVersion = true;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n\n\n\n\n");
+=======
+>>>>>>> 86356085a282df1fb32dcd30b287d7e240ef0c53
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

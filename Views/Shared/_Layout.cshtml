@@ -77,19 +77,26 @@
                     <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="EatPage">Eat</a>
                     </li>
-                    <li class="nav-item ml-4">
+                    <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Shop">Pro Shop</a>
                     </li>
+                    @if(Context.Session.GetInt32("UserId") == 1 || Context.Session.GetInt32("UserId") == 2)
+                    {
+                        <li class="dropdown nav-item ml-5">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Admin">Admin</a>
+                        </li>
+                    }
+
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item ml-4">
+                        <li class="nav-item ml-5">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Logout">Logout (@Context.Session.GetString("FirstName"))</a>
                         </li>
                     }
                     
                     else 
                     {
-                    <li class="nav-item ml-4">
+                    <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignIn">Login</a>
                     </li>
                     }

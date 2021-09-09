@@ -4,9 +4,9 @@
 <hr />
 
 <div class="container">
-<div class="row mt-5">
+<div class="row mt-5 mb-5">
 <div class="col-6">
-<img src="/img/bowling-alley-c.jpg" class="d-block w-100 mr-5" alt="image3">
+<img src="\img\marc-mueller-lwTSdfXfskE-unsplash.jpg" class="d-block w-100 mr-5" alt="image3">
 </div>
     <div class="col-6">
   <div class="form-group">
@@ -18,12 +18,13 @@
         <p>@league.Description</p>
         <p>Start Date: @league.StartDate</p>
         <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
-          @if (!alreadyJoined)
+          @if (alreadyJoined)
           {
-          <button class="btn btn-outline-success m-3">Join League</button> 
+            <button class="btn btn-outline-danger mt-3 mb-3">Leave League</button>
           } 
-          else {
-            <button class="btn btn-outline-danger btn-sm">Leave League</button>
+          else 
+          {
+            <button class="btn btn-outline-success mt-3">Join League</button> 
           }
         </form>
       }

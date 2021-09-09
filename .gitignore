@@ -86,3 +86,6 @@ obj/project.assets.json
 obj/project.nuget.cache
 obj/twelve_pins.csproj.nuget.dgspec.json
 obj/twelve_pins.csproj.nuget.g.props
+obj/Debug/net5.0/Razor/Views/Event/LeaguePage.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Event/LeaguePage.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Home/Profile.cshtml.g.cs

@@ -11,8 +11,10 @@
         </thead>
         @foreach(ReservedLane resLane in @Model.Lanes)
         {
-          <td style="border: 3px black solid; padding: 20px">@resLane.ReserveDate</td>
-          <td style="border: 3px black solid; padding: 20px">@resLane.ReservedLaneId</td>
+          <tr>
+            <td style="border: 3px black solid; padding: 20px">@resLane.ReserveDate</td>
+            <td style="border: 3px black solid; padding: 20px">@resLane.ReservedLaneId</td>
+          </tr>
         }
       </table>
       <h3 class="m-4">Leagues</h3>
@@ -24,9 +26,11 @@
         </thead>
         @foreach(LeagueMember league in @Model.Leagues)
         {
-          <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>
-          <td style="border: 3px black solid; padding: 20px">@league.League.Description</td>
-          <td style="border: 3px black solid; padding: 20px">@league.League.StartDate</td>
+          <tr>
+            <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>
+            <td style="border: 3px black solid; padding: 20px">@league.League.Description</td>
+            <td style="border: 3px black solid; padding: 20px">@league.League.StartDate</td>
+          </tr>
         }
       </table>
     </div>

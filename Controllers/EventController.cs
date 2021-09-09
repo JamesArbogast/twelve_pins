@@ -59,18 +59,40 @@ namespace twelve_pins.Controllers
         return RedirectToAction("Index", "Home");
       }
       
-      [HttpPost("/league/join/")]
-      public IActionResult JoinLeague (LeagueMember newLeagueMember)
+      [HttpPost("/league/join/{leagueId}")]
+      public IActionResult JoinLeague (int leagueId)
       {
+        List<League> allLeagues = db.Leagues
+          .Include(j => j.LeagueMembers)
+          .ToList();
+          ViewBag.Leagues = db.Leagues;
+          ViewBag.AllLeagues = allLeagues;
+
+        LeagueMember existingLeagueMember = db.LeagueMembers
+          .FirstOrDefault(j => j.UserId == (int)uid && j.LeagueId == leagueId);
+
         if (!isLoggedIn)
         {
           return View("LoginReg");
         }
-        newLeagueMember.UserId = (int)uid;
-        db.LeagueMembers.Add(newLeagueMember);
+
+        if(existingLeagueMember == null)
+        {
+          LeagueMember newLM = new LeagueMember()
+          {
+            LeagueId = leagueId,
+            UserId = (int)uid
+          };
+          db.LeagueMembers.Add(newLM);
+        }
+        else
+        {
+          db.LeagueMembers.Remove(existingLeagueMember);
+        }
+
         db.SaveChanges();
 
-        return RedirectToAction("Index");
+        return View("LeaguePage");
       }
 
       [HttpGet("/league/new")]

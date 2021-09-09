@@ -8,6 +8,8 @@
 	height: 200px;
 	perspective: 1000px;
 	box-shadow: 0px 0px 15px 15px white;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 .flip-card-inner {
 	position: relative;

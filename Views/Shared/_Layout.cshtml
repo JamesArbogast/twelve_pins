@@ -66,7 +66,7 @@
                     </li>
                 </ul>
                     <li class="nav-item ml-5">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Eat</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="EatPage">Eat</a>
                     </li>
                     <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Pro Shop</a>
@@ -90,9 +90,9 @@
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Profile">Profile</a>
                         </li>
                     }
-                    <li class="nav-item ml-5">
+                    @* <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard" asp-route-userId="@HttpContext.Session.GetInt32('UserId')">About</a>
-                    </li>
+                    </li> *@
             </ul>
         </div>
         </nav>

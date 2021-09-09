@@ -13,33 +13,28 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
+#line 1 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
 using twelve_pins;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
+#line 2 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
 using twelve_pins.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\_ViewImports.cshtml"
+#line 4 "/Users/javanogden/Desktop/pins/twelve_pins/Views/_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"652e5ca50852797c4d7987eb02ab7d097cfd0137", @"/Views/Home/Profile.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"edb86fbdb37595224ded6f8eba702c6fc131d03d", @"/Views/_ViewImports.cshtml")]
-=======
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b0a02ed57f7c7a8ef3c657a53c83cd6b3e2fd134", @"/Views/Home/Profile.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57511120aa0574db89f5162b4026b2ae467a1797", @"/Views/_ViewImports.cshtml")]
->>>>>>> ae869cb3e9511b0c849807e8bdeac3b2a5afea81
     public class Views_Home_Profile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<User>
     {
         #pragma warning disable 1998
@@ -91,25 +86,7 @@ using Microsoft.AspNetCore.Http;
 #line 16 "/Users/javanogden/Desktop/pins/twelve_pins/Views/Home/Profile.cshtml"
          foreach(LeagueMember league in @Model.Leagues)
         {
-<<<<<<< HEAD
           
-=======
-
-#line default
-#line hidden
-#nullable disable
-            WriteLiteral("          <li>");
-#nullable restore
-#line 18 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\Home\Profile.cshtml"
-         Write(league.League.Name);
-
-#line default
-#line hidden
-#nullable disable
-            WriteLiteral("</li>\r\n");
-#nullable restore
-#line 19 "C:\Users\james\OneDrive\Desktop\code_projects\twelve_pins\Views\Home\Profile.cshtml"
->>>>>>> ae869cb3e9511b0c849807e8bdeac3b2a5afea81
         }
 
 #line default

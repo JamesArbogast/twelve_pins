@@ -84,6 +84,15 @@ namespace CSharpExam.Controllers
         {
           return View();
         }
+
+        [HttpGet("/eat")]
+        public IActionResult EatPage()
+        {
+          return View();
+        }
+
+        
+
     }
 }
 

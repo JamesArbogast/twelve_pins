@@ -41,6 +41,11 @@ namespace twelve_pins.Controllers
         [HttpGet("/reserve/lane/")]
         public IActionResult ViewReserveLane()
         {
+          if (!isLoggedIn)
+          {
+            return RedirectToAction("SignIn", "Home");
+          }
+
           ViewBag.Lanes = db.Lanes;
           return View("ReserveLane");
         }
@@ -50,18 +55,23 @@ namespace twelve_pins.Controllers
       {
         if (!isLoggedIn)
         {
-          return RedirectToAction("LoginReg", "Home");
+          return RedirectToAction("SignIn", "Home");
         }
         newReservedLane.UserId = (int)uid;
         db.ReservedLanes.Add(newReservedLane);
         db.SaveChanges();
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("SignIn", "Home");
       }
       
       [HttpPost("/league/join/{leagueId}")]
       public IActionResult JoinLeague (int leagueId)
       {
+        if (!isLoggedIn)
+        {
+          return RedirectToAction("SignIn", "Home");
+        }
+
         List<League> allLeagues = db.Leagues
           .Include(j => j.LeagueMembers)
           .ToList();
@@ -71,10 +81,6 @@ namespace twelve_pins.Controllers
         LeagueMember existingLeagueMember = db.LeagueMembers
           .FirstOrDefault(j => j.UserId == (int)uid && j.LeagueId == leagueId);
 
-        if (!isLoggedIn)
-        {
-          return View("LoginReg");
-        }
 
         if(existingLeagueMember == null)
         {

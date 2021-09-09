@@ -9,8 +9,8 @@ using twelve_pins.Models;
 namespace twelve_pins.Migrations
 {
     [DbContext(typeof(TwelvePinsContext))]
-    [Migration("20210905021144_First")]
-    partial class First
+    [Migration("20210908211406_12 Pins Bowling")]
+    partial class _12PinsBowling
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,7 @@ namespace twelve_pins.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("LeagueMember");
+                    b.ToTable("LeagueMembers");
                 });
 
             modelBuilder.Entity("ReservedLane", b =>
@@ -100,7 +100,6 @@ namespace twelve_pins.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Name")
@@ -200,7 +199,7 @@ namespace twelve_pins.Migrations
             modelBuilder.Entity("LeagueMember", b =>
                 {
                     b.HasOne("twelve_pins.Models.League", "League")
-                        .WithMany()
+                        .WithMany("LeagueMembers")
                         .HasForeignKey("LeagueId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -233,6 +232,11 @@ namespace twelve_pins.Migrations
                     b.Navigation("Lane");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("twelve_pins.Models.League", b =>
+                {
+                    b.Navigation("LeagueMembers");
                 });
 
             modelBuilder.Entity("twelve_pins.Models.User", b =>

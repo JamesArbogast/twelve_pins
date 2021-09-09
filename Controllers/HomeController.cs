@@ -125,6 +125,7 @@ namespace CSharpExam.Controllers
         {
             User user = db.Users
             .Include(l => l.Leagues)
+            .ThenInclude(n => n.League)
             .Include(r => r.Lanes)
             .FirstOrDefault(u => u.UserId == userId);
             return View("Profile", user);

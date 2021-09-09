@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
-namespace CSharpExam.Controllers
+namespace twelve_pins.Controllers
 {
     public class EventController : Controller
     {
@@ -58,6 +58,20 @@ namespace CSharpExam.Controllers
 
         return RedirectToAction("Index", "Home");
       }
+      
+      [HttpPost("/league/join/")]
+      public IActionResult JoinLeague (LeagueMember newLeagueMember)
+      {
+        if (!isLoggedIn)
+        {
+          return View("LoginReg");
+        }
+        newLeagueMember.UserId = (int)uid;
+        db.LeagueMembers.Add(newLeagueMember);
+        db.SaveChanges();
+
+        return RedirectToAction("Index");
+      }
 
       [HttpGet("/league/new")]
         public IActionResult CreateLeague()
@@ -81,6 +95,29 @@ namespace CSharpExam.Controllers
 
         [HttpGet("/league/page")]
         public IActionResult LeaguePage()
+        {
+          List<League> allLeagues = db.Leagues
+          .Include(j => j.LeagueMembers)
+          .ToList();
+          ViewBag.Leagues = db.Leagues;
+          ViewBag.AllLeagues = allLeagues;
+          return View("LeaguePage");
+        }
+        
+        [HttpGet("/about/page")]
+        public IActionResult About()
+        {
+          return View();
+        }
+
+        [HttpGet("/specials/page")]
+        public IActionResult Specials()
+        {
+          return View();
+        }
+
+        [HttpGet("/shop/page")]
+        public IActionResult Shop()
         {
           return View();
         }

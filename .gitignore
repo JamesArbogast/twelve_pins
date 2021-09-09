@@ -73,3 +73,7 @@ Migrations/20210905021144_First.cs
 Migrations/TwelvePinsContextModelSnapshot.cs
 appsettings.json
 bin/Debug/net5.0/appsettings.json
+Migrations/20210907230600_twelvepinsDB.cs
+Migrations/20210907230600_twelvepinsDB.Designer.cs
+obj/Debug/net5.0/Razor/Views/Event/LeaguePage.cshtml.g.cs
+obj/Debug/net5.0/Razor/Views/Home/Profile.cshtml.g.cs

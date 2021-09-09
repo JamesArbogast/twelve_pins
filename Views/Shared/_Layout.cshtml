@@ -7,21 +7,30 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Navbar.css">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
 
 </head>
-<body>
-    <header>
+<body class="bg-light">
+    <header class="container-fluid">
         <div id="line"></div>
         <div id="line1"></div>
         <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center p-3">
             <div style="max-height: 80px" id="navLogo">
-                <a class="navbar-brand" href="#"><img src="/img/logo-pin.jpg" class="mx-auto d-block" alt="logo" /></a>
-            </div >
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/img/logo-pin.jpg" class="mx-auto d-block" alt="logo" /></a>
+            </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
                 <li class="dropdown nav-item"> 
                     <a id="dLabel" data-toggle="dropdown" data-target="#" href="" class="nav-link text-dark">
                         Bowl
@@ -34,81 +43,152 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Reserve a Lane</a>
                     </li>
                     <li class="dropdown-submenu">
-                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Parties
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Parties
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Birthday</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Birthday</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Company</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Company</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown-submenu">
-                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Home" asp-action="Dashboard">Leagues
+                        <a class="nav-link text-dark mr-5" asp-area="" asp-controller="Event" asp-action="LeaguePage">Leagues
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">Schedule</a>
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">Schedule</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">Tournaments</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark " asp-area="" asp-controller="Home" asp-action="Dashboard">League Standings</a>
+                                <a class="nav-link text-dark " asp-area="" asp-controller="Event" asp-action="LeaguePage">League Standings</a>
                             </li>
                         </ul>
                     </li>
                 </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Specials</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Specials">Specials</a>
                     </li>
                 </ul>
+<<<<<<< HEAD
                     <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="EatPage">Eat</a>
+=======
+                    <li class="nav-item ml-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Eat</a>
+>>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
                     </li>
-                    <li class="nav-item ml-5">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Pro Shop</a>
+                    <li class="nav-item ml-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Shop">Pro Shop</a>
                     </li>
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item ml-5">
+                        <li class="nav-item ml-4">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Logout">Logout (@Context.Session.GetString("FirstName"))</a>
                         </li>
                     }
                     
                     else 
                     {
-                    <li class="nav-item ml-5">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignIn">Login</a>
                     </li>
                     }
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item ml-5">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Profile">Profile</a>
+                        <li class="nav-item ml-4">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Profile" asp-route-userId="@Context.Session.GetInt32("UserId")">Profile</a>
                         </li>
                     }
+<<<<<<< HEAD
                     @* <li class="nav-item ml-5">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard" asp-route-userId="@HttpContext.Session.GetInt32('UserId')">About</a>
                     </li> *@
+=======
+                    <li class="nav-item ml-4">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="About">About</a>
+                    </li>
+>>>>>>> f62358162e04fd7ec22908da33e8f45729ad183d
             </ul>
         </div>
         </nav>
 
     </header>
     <div>
-        <main role="main">
+        <main role="main" class="container-fluid p-0">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container-fluid">
-            &copy; 2021 - twelve_pins - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+<div class="container-fluid bg-light border-top">
+    <footer class="text-center text-lg-start mt-xl-5 mt-4">
+    <div class="container-fluid  mx-auto">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase mb-4">12 Pins Bowling</h6>
+                <hr>
+        <ul class="list-unstyled mb-4">
+            <li>
+            <a href="#" class="text-dark text-decoration-none">About</a>
+            </li>
+            <li>
+            <a href="#" class="text-dark text-decoration-none">Our Promise</a>
+            </li>
+            <li>
+            <a href="#" class="text-dark text-decoration-none">Environmental Philosophy</a>
+            </li>
+        </ul>
         </div>
-    </footer>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase mb-4">Assistance</h6>
+                <hr>
+        <ul class="list-unstyled">
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Covid-19 Response</a>
+            </li>
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Contact us</a>
+            </li>
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Accommodation</a>
+            </li>
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Health Risks</a>
+            </li>
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Reservations</a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase mb-4">Careers</h6>
+                <hr>
+        <ul class="list-unstyled">
+            <li>
+            <a href="#!" class="text-dark text-decoration-none">Jobs</a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase mb-4">Sign up to our newsletter</h6>
+        <hr>
+        <div class="form-outline form-white mb-2">
+            <input type="email" id="form5Example2" class="form-control" />
+            <label class="form-label" for="form5Example2"></label>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Subscribe</button>
+        </div>
+    <div class="text-center p-3 border-top">
+    2021 - 12 Pins Bowling
+    </div>
+</footer>
+</div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

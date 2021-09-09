@@ -1,4 +1,4 @@
-@model League
+@model LeagueMember
 
 <h3 class="text-center mt-5 display-4">League Page</h3>
 <hr />
@@ -9,21 +9,25 @@
 <img src="/img/bowling-alley-c.jpg" class="d-block w-100 mr-5" alt="image3">
 </div>
     <div class="col-6">
-
-<form asp-controller="Event" asp-action="ReserveLane" method="POST">
   <div class="form-group">
-    <label asp-for="Name">Team Name</label>
-    <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
-    <select asp-for="Name" class="form-control">
-      @foreach(League league in ViewBag.Leagues) 
+      @foreach(League league in ViewBag.AllLeagues) 
       {
-        <option value="@league.Name">@league.Name</option>
-      }
-    </select>
-  </div>
 
-  <button class="btn btn-outline-primary">Join League</button>
-</form>
+        bool alreadyJoined = league.LeagueMembers.Any(join => Context.Session.GetInt32("UserId") == join.UserId);
+        <h3>@league.Name</h3>
+        <p>@league.Description</p>
+        <p>Start Date: @league.StartDate</p>
+        <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
+          @if (alreadyJoined)
+          {
+          <button class="btn btn-outline-success m-3">Join League</button> 
+          } 
+          else {
+            <button class="btn btn-outline-danger btn-sm">Leave League</button>
+          }
+        </form>
+      }
+  </div>
     </div>
   </div>
 </div>

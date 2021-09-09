@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace twelve_pins.Models
@@ -14,14 +15,16 @@ namespace twelve_pins.Models
       public string Name { get; set; }
 
       [Required(ErrorMessage = "is required")]
+      [DataType(DataType.Date)]
       [Display(Name = "Start Date")]
       public DateTime StartDate { get; set; }
 
-      [Required(ErrorMessage = "is required")]
       [MinLength(5, ErrorMessage = "must be at least 5 characters")]
       [Display(Name = "Description")]
       public string Description { get; set; }
       public DateTime CreatedAt { get; set; } = DateTime.Now;
       public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+      public List<LeagueMember> LeagueMembers { get; set; }
     }
   }

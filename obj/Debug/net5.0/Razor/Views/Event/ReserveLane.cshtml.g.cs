@@ -209,9 +209,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
 #line hidden
 #nullable disable
                     WriteLiteral("              ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3975bdc556a73d75434a68fed196131d6c6edb415451", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a939947a38727efc9657c9b3e6167d330d2a43e715079", async() => {
 #nullable restore
-#line 27 "C:\Users\Myles\Desktop\coding\Personal Projs\twelve_pins\Views\Event\ReserveLane.cshtml"
+#line 27 "/Users/javanogden/Desktop/pins/twelve_pins/Views/Event/ReserveLane.cshtml"
                                       Write(lane.LaneNumber);
 
 #line default
@@ -289,7 +289,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n");
+            WriteLiteral("\n    </div>\n  </div>\n</div>\n\n");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

@@ -18,7 +18,7 @@
         <p>@league.Description</p>
         <p>Start Date: @league.StartDate</p>
         <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
-          @if (alreadyJoined)
+          @if (!alreadyJoined)
           {
           <button class="btn btn-outline-success m-3">Join League</button> 
           } 

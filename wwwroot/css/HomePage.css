@@ -1,12 +1,12 @@
 #carouselControls .carousel-item img {
 	object-fit: cover;
 	object-position: center;
-	height: 50vh;
+	height: 75vh;
 	overflow: hidden;
 }
 #carouselControls .carousel-item .text {
 	position: absolute;
-	padding-top: 7%;
+	padding-top: 12%;
 	padding-left: 9%;
 	top: 0%;
 	height: 100%;

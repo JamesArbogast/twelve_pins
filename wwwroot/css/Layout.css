@@ -1,0 +1,15 @@
+.navbar {
+	border-bottom: 4px solid rgb(255, 175, 84);
+	background-color: #191c1fe7;
+}
+.navbar-brand {
+	max-height: 10vh !important;
+	overflow: hidden;
+}
+.nav-link {
+	font-weight: bold;
+	color: rgb(236, 236, 236) !important;
+}
+.nav-link:hover {
+	color: rgb(255, 222, 196) !important;
+}

@@ -13,75 +13,86 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark w-100 p-0">
             <div class="container-fluid">
-                <a class="navbar-brand w-50 h-100 p-0" href="#">
+                <a class="navbar-brand h-100 p-0" href="#">
                 <img id="nav-logo" src="/img/logo.png" alt="" width="170" height="90" class="d-inline-block align-text-center overflow-hidden">
                 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse w-25" id="navbarNavDropdown">
-            <ul class="navbar-nav w-50">
+            <div class="collapse navbar-collapse ms-5" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link font-bold mr-5" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">HOME</button></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-3" asp-area="" asp-controller="Event" asp-action="EatPage">Eat</a>
+                <li class="nav-item me-1">
+                    <a class="nav-link" asp-area="" asp-controller="Event" asp-action="EatPage"><button class="btn">EATS</button></a>
                 </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Bowl
+                <li class="nav-item me-1 dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn">BOWL
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item mr-3" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Reserve a Lane</a></li>
-                    <li><a class="dropdown-item mr-3" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Birthday</a></li>
-                    <li><a class="dropdown-item mr-3" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Company Event</a></li>
-                    <li><a class="dropdown-item mr-3" asp-area="" asp-controller="Event" asp-action="Specials">Specials</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Reserve a Lane</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Birthday</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="ViewReserveLane">Company Event</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="Specials">Specials</a></li>
                 </ul>
                 </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mr-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Leagues
+                <li class="nav-item me-3 dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn">LEAGUE
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item mr-3 " asp-area="" asp-controller="Event" asp-action="LeaguePage">Game Schedule</a></li>
-                    <li><a class="dropdown-item mr-3 " asp-area="" asp-controller="Event" asp-action="LeaguePage">Tournaments</a></li>
-                    <li><a class="dropdown-item mr-3 " asp-area="" asp-controller="Event" asp-action="LeaguePage">League Standings</a></li>
-                    <li><a class="dropdown-item mr-3 " asp-area="" asp-controller="Event" asp-action="Shop">Pro Shop</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="LeaguePage">Game Schedule</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="LeaguePage">Tournaments</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="LeaguePage">League Standings</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Event" asp-action="Shop">Pro Shop</a></li>
                 </ul>
                 </li>
                     @if(Context.Session.GetInt32("UserId") == 1 || Context.Session.GetInt32("UserId") == 2)
                     {
-                        <li class="dropdown nav-item">
-                            <a class="nav-link mr-3" asp-area="" asp-controller="Event" asp-action="Admin">Admin</a>
+                        <li class="dropdown nav-item me-1">
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">ADMIN</button></a>
                         </li>
                     }
 
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" asp-controller="Home" asp-action="Logout">Logout (@Context.Session.GetString("FirstName"))</a>
+                        <li class="nav-item me-1">
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">LOGOUT(@Context.Session.GetString("FirstName"))</button></a>
                         </li>
                     }
                     
                     else 
                     {
-                    <li class="nav-item">
-                        <a class="nav-link mr-3" asp-area="" asp-controller="Home" asp-action="SignIn">Login</a>
+                    <li class="nav-item me-1">
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">LOGIN</button></a>
                     </li>
                     }
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" asp-controller="Home" asp-action="Profile" asp-route-userId="@Context.Session.GetInt32("UserId")">Profile</a>
+                        <li class="nav-item me-1">
+                            <a class="nav-link" asp-controller="Home" asp-action="Profile" asp-route-userId="@Context.Session.GetInt32("UserId")"><button>PROFILE</button></a>
                         </li>
                     }
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Event" asp-action="About" >About</a>
+                    <li class="nav-item me-1">
+                        <a class="nav-link" asp-area="" asp-controller="Event" asp-action="About"><button class="btn">ABOUT</button></a>
                     </li>
             </ul>
             </div>

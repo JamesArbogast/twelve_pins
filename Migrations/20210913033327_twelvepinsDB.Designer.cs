@@ -9,8 +9,8 @@ using twelve_pins.Models;
 namespace twelve_pins.Migrations
 {
     [DbContext(typeof(TwelvePinsContext))]
-    [Migration("20210908211406_12 Pins Bowling")]
-    partial class _12PinsBowling
+    [Migration("20210913033327_twelvepinsDB")]
+    partial class twelvepinsDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,8 +58,14 @@ namespace twelve_pins.Migrations
                     b.Property<int>("LaneId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Party")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<DateTime>("ReserveDate")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<int>("ReserveTime")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");

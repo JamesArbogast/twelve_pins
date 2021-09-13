@@ -61,7 +61,7 @@ namespace twelve_pins.Controllers
         db.ReservedLanes.Add(newReservedLane);
         db.SaveChanges();
 
-        return RedirectToAction("SignIn", "Home");
+        return RedirectToAction("Index", "Home");
       }
       
       [HttpPost("/league/join/{leagueId}")]

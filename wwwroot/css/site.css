@@ -6,7 +6,10 @@ a.navbar-brand {
 	text-align: center;
 	word-break: break-all;
 }
-
+#features-container {
+	background-image: url('../img/bowling-bg-3.jpg') !important;
+	background-size: contain;
+}
 /* Provide sufficient contrast against white background */
 a {
 	color: #0366d6;

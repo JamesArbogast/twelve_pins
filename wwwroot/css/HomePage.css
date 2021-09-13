@@ -1,8 +1,19 @@
+#homepage-carousel {
+	border-bottom: 1vh solid rgb(71, 71, 71);
+}
+#carouselControls {
+	height: 90vh;
+	z-index: 1 !important;
+}
+
 #carouselControls .carousel-item img {
 	object-fit: cover;
 	object-position: center;
-	height: 75vh;
+	height: 90vh;
+	width: 100vw;
+	top: 0%;
 	overflow: hidden;
+	z-index: 1 !important;
 }
 #carouselControls .carousel-item .text {
 	position: absolute;
@@ -12,6 +23,7 @@
 	height: 100%;
 	width: 100%;
 	font-weight: bold;
+	letter-spacing: 2px;
 	color: white;
 	background-image: linear-gradient(
 		to right,
@@ -22,11 +34,171 @@
 		rgba(0, 0, 0, 0) 100%
 	);
 }
-
-#header1 p {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+#carouselControls .carousel-item .button-container {
+	position: absolute;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	top: 0%;
+}
+#carouselControls .carousel-item .carousel-button {
+	position: absolute;
+	font-size: 200%;
+	margin-top: 60vh;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15vw;
+	padding-right: 15vw;
+	top: 0%;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: rgb(235, 235, 235) !important;
+	background-color: rgb(230, 0, 0);
+	border: none;
+}
+#carouselControls .carousel-item .carousel-button:hover {
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(255, 0, 0);
+}
+/* FEATURES */
+#features-container {
+	display: flex;
+	justify-content: center;
+	align-items: top;
+	top: 0%;
+	height: auto;
+	background-image: url('../img/texture-1.jpg') !important;
+	background-size: contain;
+}
+#features {
+	margin-top: 1vh;
+	margin-bottom: 3vh;
+	position: relative;
+	z-index: 3 !important;
+	background-image: url('../img/wood.jpg');
+}
+#features-content {
+	background-color: #191c1fe8;
+	color: white;
+	max-width: 90%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+#features-content h3 {
+	margin-top: 3%;
+	margin-bottom: 3%;
+	font-family: 'Teko', sans-serif;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	letter-spacing: 2px;
+	border-bottom: 3vh solid red;
+	height: 7vh;
 }
 
+#features-content p {
+	font-weight: lighter;
+	color: rgb(255, 255, 255);
+	font-size: 3vh;
+	width: 80%;
+	padding-left: 12%;
+	padding-right: 12%;
+}
+/* ******************* */
+
+#features-content h3 {
+	font-size: 1rem;
+	border-bottom: 1vh solid red;
+	height: 1.5vh;
+}
+#features-content p {
+	font-size: 0.6rem;
+}
+@media (min-width: 300px) {
+	#features-content h3 {
+		font-size: 1.6rem;
+		border-bottom: 1vh solid red;
+		height: 2.2vh;
+	}
+	#features-content p {
+		font-size: 0.7em;
+		width: 100%;
+	}
+	#features {
+		width: 85vw;
+		padding-top: 2vh !important;
+	}
+}
+@media (min-width: 544px) {
+	#features-content h3 {
+		font-size: 2.7rem;
+		border-bottom: 1.4vh solid red;
+		height: 3.6vh;
+	}
+	#features-content p {
+		font-size: 1.1rem;
+	}
+	#features {
+		width: 85vw;
+		padding-top: 2vh !important;
+	}
+}
+@media (min-width: 768px) {
+	#features-content h3 {
+		font-size: 3.2rem;
+		border-bottom: 2vh solid red;
+		height: 5vh;
+	}
+	#features-content p {
+		font-size: 1.2rem;
+	}
+	#features {
+		width: 85vw;
+		padding-top: 3vh !important;
+	}
+}
+@media (min-width: 992px) {
+	#features-content h3 {
+		font-size: 3.6rem;
+		border-bottom: 2.4vh solid red;
+		height: 6vh;
+	}
+	#features-content p {
+		font-size: 1.2rem;
+	}
+	#features {
+		width: 80vw;
+	}
+}
+@media (min-width: 1100px) {
+	#features-content h3 {
+		font-size: 4.5rem;
+		border-bottom: 3.2vh solid red;
+		height: 7.5vh;
+	}
+	#features-content p {
+		font-size: 1.3rem;
+	}
+	#features {
+		width: 70vw;
+	}
+}
+@media (min-width: 1300px) {
+	#features {
+		width: 60vw;
+	}
+}
+@media (min-width: 1500px) {
+	#features {
+		width: 60vw;
+	}
+}
+/* ******************* */
+#cards-section {
+	background-color: #212529;
+	border-top: 1vh solid rgb(71, 71, 71);
+}
 #home-cards .col {
 	display: flex;
 	justify-content: center;
@@ -51,7 +223,6 @@
 	min-height: 100%;
 	height: 70vh;
 }
-
 #home-cards .col h2 {
 	position: absolute;
 	width: 100%;
@@ -74,9 +245,6 @@
 	transition: transform 0.2s ease-in-out;
 	color: rgb(255, 255, 255);
 }
-/* #header2 {
-	border-top: 50px solid red;
-} */
 #header2 .col img {
 	object-position: fill;
 	min-width: 100%;
@@ -90,8 +258,7 @@
 	min-width: 100%;
 	min-height: 100%;
 	height: 30vh;
-	margin-bottom: 100px;
-	margin-top: 20px;
+	margin-bottom: 50px;
 }
 #header2 .text {
 	position: absolute;

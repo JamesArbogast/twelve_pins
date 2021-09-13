@@ -21,7 +21,7 @@
           bool alreadyJoined = league.LeagueMembers.Any(join => Context.Session.GetInt32("UserId") == join.UserId);
           <h3>@league.Name</h3>
           <p>@league.Description</p>
-          <p>Start Date: @league.StartDate</p>
+          <p>Start Date: @league.MeetingDay</p>
           <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
             @if (alreadyJoined)
             {

@@ -5,20 +5,20 @@
 
 <form asp-controller="Event" asp-action="CreateLeague" method="POST" class="ml-5">
   <div class="form-group">
-    <label asp-for="Name"></label>
+    <label asp-for="Name" class="text-light"></label>
     <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
     <input asp-for="Name" class="form-control" />
   </div>
       <div class="form-group">
-        <label asp-for="Description"></label>
+        <label asp-for="Description" class="text-light"></label>
         <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
         <textarea asp-for="Description" class="form-control" ></textarea>
       </div>
 
       <div class="form-group">
-        <label asp-for="StartDate"></label>
-        <span asp-validation-for="StartDate" class="text-danger font-weight-bold"></span>
-        <input asp-for="StartDate" class="form-control" />
+        <label asp-for="MeetingDay" class="text-light"></label>
+        <span asp-validation-for="MeetingDay" class="text-danger font-weight-bold"></span>
+        <input asp-for="MeetingDay" class="form-control" placeholder="ex. Fridays at 5:00 PM" />
       </div>
       <button class="btn btn-primary">Create</button>
     </form>

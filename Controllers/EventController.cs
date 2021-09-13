@@ -104,12 +104,22 @@ namespace twelve_pins.Controllers
       [HttpGet("/league/new")]
         public IActionResult CreateLeague()
         {
+          if(!isLoggedIn)
+          {
+            return RedirectToAction("LoginReg", "Home");
+          }
+
           return View();
         }
 
         [HttpPost("/league/create")]
         public IActionResult CreateLeague(League newLeague)
         {
+            if(!isLoggedIn)
+            {
+              return RedirectToAction("LoginReg", "Home");
+            }
+
             if (ModelState.IsValid == false)
             {
               return View("CreateLeague");
@@ -124,6 +134,11 @@ namespace twelve_pins.Controllers
         [HttpPost("/lane/create")]
         public IActionResult CreateLane(Lane newLane)
         {
+            if(!isLoggedIn)
+            {
+              return RedirectToAction("LoginReg", "Home");
+            }
+
             if (ModelState.IsValid == false)
             {
                 return View("Admin");
@@ -138,6 +153,11 @@ namespace twelve_pins.Controllers
         [HttpGet("/admin")]
         public IActionResult Admin()
         {
+            if(!isLoggedIn)
+            {
+              return RedirectToAction("LoginReg", "Home");
+            }
+
             return View ("Admin");
         }
 
@@ -147,6 +167,7 @@ namespace twelve_pins.Controllers
           List<League> allLeagues = db.Leagues
           .Include(j => j.LeagueMembers)
           .ToList();
+
           ViewBag.Leagues = db.Leagues;
           ViewBag.AllLeagues = allLeagues;
           return View("LeaguePage");

@@ -15,9 +15,8 @@ namespace twelve_pins.Models
       public string Name { get; set; }
 
       [Required(ErrorMessage = "is required")]
-      [DataType(DataType.Date)]
-      [Display(Name = "Start Date")]
-      public DateTime StartDate { get; set; }
+      [Display(Name = "Meeting Day")]
+      public string MeetingDay { get; set; }
 
       [MinLength(5, ErrorMessage = "must be at least 5 characters")]
       [Display(Name = "Description")]

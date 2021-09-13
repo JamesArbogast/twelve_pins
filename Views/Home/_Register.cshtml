@@ -1,5 +1,25 @@
 @model User
 
+<style>
+.btn-nav {
+	background-color: #4682B4;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  border-radius: 3px;
+}
+.btn-nav:hover {
+	background-color: #007BFF;
+}
+</style>
+
 <h3 class="text-center text-white">Register</h3>
 <hr />
 
@@ -34,5 +54,5 @@
     <input asp-for="ConfirmPW" class="form-control" />
   </div>
 
-  <button class="btn btn-outline-primary mb-4">Register</button>
+  <button class="btn-nav mb-5">Register</button>
 </form>

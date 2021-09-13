@@ -5,6 +5,25 @@
 			crossorigin="anonymous"
 		/>
 
+<style>
+.btn-nav {
+	background-color: #4682B4;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  border-radius: 3px;
+}
+.btn-nav:hover {
+	background-color: #007BFF;
+}
+</style>
 
 @model User
 
@@ -28,7 +47,7 @@
       <h3 class="m-4">Leagues</h3>
         @if(@Model.Leagues.Count < 1)
         {
-          <button class="btn">Join a League</button>
+          <button class="btn-nav">Join a League</button>
         }
         else 
         {

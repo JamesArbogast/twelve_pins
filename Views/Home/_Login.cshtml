@@ -1,17 +1,17 @@
 @model LoginUser
 
-<h3 class="text-center">Login</h3>
+<h3 class="text-center text-white">Login</h3>
 <hr />
 
 <form asp-controller="Home" asp-action="Login" method="POST">
   <div class="form-group">
-    <label asp-for="LoginEmail"></label>
+    <label asp-for="LoginEmail" class="text-white"></label>
     <span class="text-danger font-weight-bold" asp-validation-for="LoginEmail"></span>
     <input class="form-control" asp-for="LoginEmail" />
   </div>
 
   <div class="form-group">
-    <label asp-for="LoginPassword"></label>
+    <label asp-for="LoginPassword" class="text-white"></label>
     <span class="text-danger font-weight-bold" asp-validation-for="LoginPassword"></span>
     <input class="form-control" asp-for="LoginPassword" value="Testing123!" />
   </div>

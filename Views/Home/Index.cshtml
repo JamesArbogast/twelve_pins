@@ -6,72 +6,87 @@
     ViewData["Title"] = "Home Page";
 }
 
-</section>
-
-    <div>
-      <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/img/toddler.jpg" class="d-block w-100" alt="image1">
-            <h3 class="text font-italic display-3">Family Fun</h3>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/shoe-wall.jpg" class="d-block w-100" alt="image2">
-            <h3 class="text font-italic display-3">Classic Bowling <br>Reimagined</h3>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/bowling-alley-c.jpg" class="d-block w-100" alt="image3">
-            <h3 class="text font-italic display-3">League Play</h3>
+<section id="homepage-carousel">
+  <div>
+    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/toddler.jpg" class="d-block w-100" alt="image1">
+          <h3 class="text font-italic display-3">Family Fun</h3>
+          <div class="button-container">
+            <button class="carousel-button rounded">RESERVE</button>
           </div>
         </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-
-<hr>
-<section id="header1" class="container my-3 w-75"> 
-    <h1 class="font-italic text-center display-1 mb-3">12 Pins</h1>
-    <p class="text-center h5 mb-5">We have the ultimate environment for people of all ages! We take great pride in being family-friendly with outstanding service to cater 
-      to all your needs.  Come in and bowl on any of our 32 themed bowling lanes, or grab a bit to eat at our Award-winning Restaurant & lounge- The GutterBall! 
-      We offer lane-side service for all your food and beverage needs which means you place the order, and it'll be delivered right to your lane. that ordering has never been easier. 
-      There are so many special events and offers to choose from:  our late night Late Night Party, Cosmic X-Bowl, Professional Leagues, Public Bowling, 10 Pin Tap, and of course the Arcade.  
-      Our promise to each and every guest is that you will have fun and leave with a smile.  Join us and be a part of what makes 12 Pins the Best Bowling Alley in Western Washington!</p>
-</section><hr>
-
-<section>
-<div class="container-fluid g-0">
-  <div class="row g-0"  id="home-cards">
-    <div onclick="window.location.href = 'PartyPage';" class="col col-12 col-md-4 mt-2 overflow-hidden text-center">
-      <img src="/img/birthday2.jpg" alt="">
-        <h2>
-            Parties
-        </h2>
+        <div class="carousel-item">
+          <img src="/img/food.jpg" class="d-block w-100" alt="image2">
+          <h3 class="text font-italic display-3">Grab a Bite at<br>The GutterBall</h3>
+          <div class="button-container">
+            <button class="carousel-button rounded">MENU</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/bowling-alley-c.jpg" class="d-block w-100" alt="image3">
+          <h3 class="text font-italic display-3">League Play</h3>
+          <div class="button-container">
+            <button class="carousel-button rounded">VIEW LEAGUES</button>
+          </div>
+        </div>
       </div>
-    <div onclick="window.location.href = '/league/page';" class="col col-12 col-md-4 mt-2 overflow-hidden text-center">
-
-      <img src="/img/league2.jpg" alt="">
-        <h2>
-          League
-        </h2>
-      </div>
-    <div onclick="window.location.href = 'BarAndGrillPage';" class="col col-12 col-md-4 mt-2 overflow-hidden text-center">
-
-      <img src="/img/food2.jpg" alt="">
-        <h2>
-          The
-          GutterBall
-        </h2>
-      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>
 </section>
+
+
+<section id="features-container" class="w-100">
+  <div id="features" class=" pt-5">
+    <div id="features-content" class="container">
+      <h3 class="text-start">21 LANES</h3>
+      <p class="text-center mx-auto">Our lanes are oiled and bowling balls polished every morning to ensure perfect bowling conditions. We pride ourselves on providing a top quality bowling experience whether it's for an event, a night out, or a league game.
+      <h3 class="text-end">ARCADE</h3>
+      <p class="text-center mx-auto">Great for all ages and parties, the arcade is equipped with big screen TVs, video games, and opportunities to challenge your skills in more ways than just on screen.
+      <h3 class="text-start"> BILLIARDS</h3>
+      <p class="text-center mx-auto">If bowling isn't your game, 12 Pins also features high-end felted billard tables were you can test your skills and challenge your friends.
+      <h3 class="text-end">LOUNGE</h3>
+      <p class="text-center mx-auto">If you're looking for some good grub, The GutterBall offers a full menu featuring steaks, salads, burgers, and a full bar. Pull up a chair, kickback, and enjoy.
+    </div>
+    </p>
+  </div>
+</section>
+
+<section id="cards-section">
+  <div class="container g-0 pt-3">
+    <div class="row g-0"  id="home-cards">
+      <div onclick="window.location.href = 'PartyPage';" class="col col-12 col-md-4 pb-3 overflow-hidden text-center">
+        <img src="/img/birthday2.jpg" alt="">
+          <h2>
+              Parties
+          </h2>
+        </div>
+      <div onclick="window.location.href = '/league/page';" class="col col-12 col-md-4 pb-3 overflow-hidden text-center">
+        <img src="/img/league2.jpg" alt="">
+          <h2>
+            League
+          </h2>
+        </div>
+      <div onclick="window.location.href = 'BarAndGrillPage';" class="col col-12 col-md-4 pb-3 overflow-hidden text-center">
+        <img src="/img/food2.jpg" alt="">
+          <h2>
+            The
+            GutterBall
+          </h2>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section id="header2" class="container-fluid p-0"> 
   <div id="detail-color"></div>

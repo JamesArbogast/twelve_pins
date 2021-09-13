@@ -28,7 +28,7 @@ namespace twelve_pins.Migrations
                     LeagueId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    MeetingDay = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
@@ -114,7 +114,8 @@ namespace twelve_pins.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReserveDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     ReserveTime = table.Column<int>(type: "int", nullable: false),
-                    Party = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    BirthdayParty = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    BusinessEvent = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     LaneId = table.Column<int>(type: "int", nullable: false),

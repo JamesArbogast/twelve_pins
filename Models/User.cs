@@ -25,8 +25,9 @@ namespace twelve_pins.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "is required")]
-        [MinLength(8, ErrorMessage = "Must be at least 8 characters.")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$", ErrorMessage = "Password is Invalid, Please make sure that there is at least 1 uppercase, 1 lowercase, and 1 special character.")]
+        [DataType(DataType.Password)]
+        [MinLength(8, ErrorMessage = "must be at least 8 characters.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$", ErrorMessage = "is Invalid, Please make sure that there is at least 1 uppercase, 1 lowercase, and 1 special character.")]
         [Display(Name = "Password")]
         public string Password { get; set; }
 

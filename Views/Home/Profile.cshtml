@@ -26,28 +26,28 @@
         }
       </table>
       <h3 class="m-4">Leagues</h3>
-      <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
-        <thead class="m-4">
-          <th style="border: 3px black solid; padding: 20px">Name</th>
-          <th style="border: 3px black solid; padding: 20px">Description</th>
-          <th style="border: 3px black solid; padding: 20px">Founding Date</th>
-        </thead>
         @if(@Model.Leagues.Count < 1)
         {
           <button class="btn">Join a League</button>
         }
         else 
         {
-          @foreach(LeagueMember league in @Model.Leagues)
-          {
-            <tr>
-              <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>
-              <td style="border: 3px black solid; padding: 20px">@league.League.Description</td>
-              <td style="border: 3px black solid; padding: 20px">@league.League.MeetingDay</td>
-            </tr>
+          <table class="m-4 px-3" style="border: 3px black solid; padding: 20px">
+            <thead class="m-4">
+              <th style="border: 3px black solid; padding: 20px">Name</th>
+              <th style="border: 3px black solid; padding: 20px">Description</th>
+              <th style="border: 3px black solid; padding: 20px">Founding Date</th>
+            </thead>
+            @foreach(LeagueMember league in @Model.Leagues)
+            {
+              <tr>
+                <td style="border: 3px black solid; padding: 20px">@league.League.Name</td>
+                <td style="border: 3px black solid; padding: 20px">@league.League.Description</td>
+                <td style="border: 3px black solid; padding: 20px">@league.League.MeetingDay</td>
+              </tr>
           }
+          </table>
         }
-      </table>
     </div>
     <div class="card-body">
 </div>

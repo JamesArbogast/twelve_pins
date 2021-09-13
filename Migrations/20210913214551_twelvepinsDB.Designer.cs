@@ -9,7 +9,7 @@ using twelve_pins.Models;
 namespace twelve_pins.Migrations
 {
     [DbContext(typeof(TwelvePinsContext))]
-    [Migration("20210913033327_twelvepinsDB")]
+    [Migration("20210913214551_twelvepinsDB")]
     partial class twelvepinsDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,14 +52,17 @@ namespace twelve_pins.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<bool>("BirthdayParty")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("BusinessEvent")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("LaneId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("Party")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime>("ReserveDate")
                         .HasColumnType("datetime(6)");
@@ -108,12 +111,13 @@ namespace twelve_pins.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("MeetingDay")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");

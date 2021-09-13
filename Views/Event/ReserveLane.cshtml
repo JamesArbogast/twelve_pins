@@ -54,13 +54,13 @@
             }
           </select><br>
           <div>
-            <input type="checkbox" value="Birthday">
-            <label class="me-1" for="vehicle1">Birthday Party </label>
-            <input type="text" placeholder="birthday name, etc."><br>
-            <input type="checkbox" value="CorporateEvent">
-            <label for="vehicle2">Business Event</label>
-            <input type="text" placeholder="business name, etc"><br>
+            <label asp-for="BirthdayParty">Birthday Party</label>
+            <span asp-validation-for="BirthdayParty" class="text-danger font-weight-bold"></span>
+            <input asp-for="BirthdayParty" type="checkbox">
           </div>
+            <label asp-for="BusinessEvent">Business Event</label>
+            <span asp-validation-for="BusinessEvent" class="text-danger font-weight-bold"></span>
+            <input asp-for="BusinessEvent" type="checkbox">
         </div>
         <button class="btn btn-primary">Reserve Lane</button>
       </form>

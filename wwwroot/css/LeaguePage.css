@@ -3,6 +3,7 @@
 	background-size: cover;
 	background-position: center;
 	height: 80vh;
+	min-height: 70vh;
 	width: 100%;
 	overflow: hidden;
 }

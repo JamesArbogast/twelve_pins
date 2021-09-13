@@ -142,6 +142,7 @@ namespace CSharpExam.Controllers
             .Include(l => l.Leagues)
             .ThenInclude(n => n.League)
             .Include(r => r.Lanes)
+            .ThenInclude(n => n.Lane)
             .FirstOrDefault(u => u.UserId == userId);
             return View("Profile", user);
         }

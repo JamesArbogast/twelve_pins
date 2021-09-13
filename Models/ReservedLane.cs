@@ -12,8 +12,7 @@ public class ReservedLane
     public DateTime ReserveDate { get; set; }
 
     [Required]
-    [DataType(DataType.Date)]
-    public int ReserveTime { get; set; }
+    public String ReserveTime { get; set; }
 
     public bool BirthdayParty { get; set; }
     public bool BusinessEvent { get; set; }

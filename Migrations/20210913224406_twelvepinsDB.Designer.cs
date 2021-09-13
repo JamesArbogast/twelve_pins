@@ -9,7 +9,7 @@ using twelve_pins.Models;
 namespace twelve_pins.Migrations
 {
     [DbContext(typeof(TwelvePinsContext))]
-    [Migration("20210913214551_twelvepinsDB")]
+    [Migration("20210913224406_twelvepinsDB")]
     partial class twelvepinsDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,8 +67,9 @@ namespace twelve_pins.Migrations
                     b.Property<DateTime>("ReserveDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ReserveTime")
-                        .HasColumnType("int");
+                    b.Property<string>("ReserveTime")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");

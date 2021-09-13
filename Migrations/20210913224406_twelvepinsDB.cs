@@ -113,7 +113,7 @@ namespace twelve_pins.Migrations
                     ReservedLaneId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReserveDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ReserveTime = table.Column<int>(type: "int", nullable: false),
+                    ReserveTime = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     BirthdayParty = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     BusinessEvent = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),

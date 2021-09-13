@@ -8,6 +8,44 @@
 
 @model LeagueMember
 
+
+<style>
+.btn-nav {
+	background-color: #4682B4;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  border-radius: 3px;
+}
+.btn-nav-danger {
+	background-color: #D70040	;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+  border-radius: 3px;
+}
+.btn-nav-danger:hover {
+	background-color: #DE3163;
+}
+.btn-nav:hover {
+	background-color: #007BFF;
+}
+</style>
+
 <div id="banner-jumbo" class="h-100">
   <div class="container">
   <div class="row mt-5 mb-5">
@@ -21,15 +59,15 @@
           bool alreadyJoined = league.LeagueMembers.Any(join => Context.Session.GetInt32("UserId") == join.UserId);
           <h3>@league.Name</h3>
           <p>@league.Description</p>
-          <p>Start Date: @league.MeetingDay</p>
+          <p>Meeting(s): @league.MeetingDay</p>
           <form asp-controller="Event" asp-action="JoinLeague" asp-route-leagueId="@league.LeagueId" method="POST" class="mb-4">
             @if (alreadyJoined)
             {
-              <button class="btn btn-outline-danger mt-3 mb-3">Leave League</button>
+              <button class="btn-nav-danger">Leave League</button>
             } 
             else 
             {
-              <button class="btn btn-outline-success mt-3">Join League</button> 
+              <button class="btn-nav">Join League</button> 
             }
           </form>
         }

@@ -19,7 +19,7 @@
 }
 .btn:hover {
 	border-radius: 2px;
-	transition: all ease 0.8s;
-	box-shadow: inset 100px 0 0 0 #ffffff;
+	transition: all ease 0.9s;
+	box-shadow: inset 150px 0 0 0 #ffffff;
 	color: rgb(255, 0, 0) !important;
 }

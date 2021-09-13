@@ -1,6 +1,6 @@
 @model Lane
 
-<h3 class="text-center mt-5 display-4">Create Lane</h3>
+<h3 class="text-center mt-5 display-4 text-light">Create Lane</h3>
 <hr />
 
 <form asp-controller="Event" asp-action="CreateLane" method="POST" class="ml-5">
@@ -9,5 +9,5 @@
     <span asp-validation-for="LaneNumber" class="text-danger font-weight-bold"></span>
     <input asp-for="LaneNumber" class="form-control" />
   </div>
-      <button class="btn btn-outline-primary">Create Lane</button>
+      <button class="btn btn-primary">Create</button>
 </form>

@@ -20,12 +20,32 @@
     <div class="card-body mx-auto">
       <form asp-controller="Event" asp-action="ReserveLane" method="POST" class="d-flex-column w-auto justify-content-center m-2">
         <div class="form-group">
-          <label asp-for="ReserveDate"></label>
+          <label asp-for="ReserveDate">Reserve a Date</label>
           <span asp-validation-for="ReserveDate" class="text-danger font-weight-bold"></span>
           <input asp-for="ReserveDate" class="form-control" />
         </div>
         <div class="form-group">
-          <label asp-for="LaneId">Lane</label>
+          <label asp-for="ReserveTime">Reserve a Time</label>
+          <span asp-validation-for="ReserveTime" class="text-danger font-weight-bold"></span>
+          <select asp-for="ReserveTime" class="form-control">
+            <option value="9">9 AM</option>
+            <option value="10">10 AM</option>
+            <option value="11">11 AM</option>
+            <option value="12">12 PM</option>
+            <option value="13">1 PM</option>
+            <option value="14">2 PM</option>
+            <option value="15">3 PM</option>
+            <option value="16">4 PM</option>
+            <option value="17">5 PM</option>
+            <option value="18">6 PM</option>
+            <option value="19">7 PM</option>
+            <option value="20">8 PM</option>
+            <option value="21">9 PM</option>
+            <option value="22">10 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label asp-for="LaneId">Choose an available lane</label>
           <span asp-validation-for="LaneId" class="text-danger font-weight-bold"></span>
           <select asp-for="LaneId" class="form-control">
             @foreach(Lane lane in ViewBag.Lanes) 
@@ -34,15 +54,15 @@
             }
           </select><br>
           <div>
-            <input type="checkbox" value="Birthday">
-            <label class="me-1" for="vehicle1">Birthday Party </label>
-            <input type="text" placeholder="birthday name, etc."><br>
-            <input type="checkbox" value="CorporateEvent">
-            <label for="vehicle2">Business Event</label>
-            <input type="text" placeholder="business name, etc"><br>
+            <label asp-for="BirthdayParty">Birthday Party</label>
+            <span asp-validation-for="BirthdayParty" class="text-danger font-weight-bold"></span>
+            <input asp-for="BirthdayParty" type="checkbox">
           </div>
+            <label asp-for="BusinessEvent">Business Event</label>
+            <span asp-validation-for="BusinessEvent" class="text-danger font-weight-bold"></span>
+            <input asp-for="BusinessEvent" type="checkbox">
         </div>
-        <button class="btn btn-primary">Reserve Lane</button>
+        <button class="btn btn-primary text-white">Reserve Lane</button>
       </form>
     </div>
   </div>

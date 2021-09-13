@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace twelve_pins.Migrations
 {
-    public partial class _12PinsBowling : Migration
+    public partial class twelvepinsDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -113,6 +113,8 @@ namespace twelve_pins.Migrations
                     ReservedLaneId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReserveDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    ReserveTime = table.Column<int>(type: "int", nullable: false),
+                    Party = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     LaneId = table.Column<int>(type: "int", nullable: false),

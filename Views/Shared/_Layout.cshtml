@@ -68,21 +68,21 @@
                     @if(Context.Session.GetInt32("UserId") == 1 || Context.Session.GetInt32("UserId") == 2)
                     {
                         <li class="dropdown nav-item me-1">
-                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">ADMIN</button></a>
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Event" asp-action="Admin"><button class="btn">ADMIN</button></a>
                         </li>
                     }
 
                     @if (Context.Session.GetInt32("UserId") != null)
                     {
                         <li class="nav-item me-1">
-                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">LOGOUT(@Context.Session.GetString("FirstName"))</button></a>
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Logout"><button class="btn">LOGOUT(@Context.Session.GetString("FirstName"))</button></a>
                         </li>
                     }
                     
                     else 
                     {
                     <li class="nav-item me-1">
-                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn">LOGIN</button></a>
+                            <a class="nav-link font-bold" asp-area="" asp-controller="Home" asp-action="SignIn"><button class="btn">LOGIN</button></a>
                     </li>
                     }
                     @if (Context.Session.GetInt32("UserId") != null)
